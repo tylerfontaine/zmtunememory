@@ -44,7 +44,7 @@ if [ $MEMGB -eq 8 ]; then
 	JAVAHEAP=`perl -E "say int(($MEMTOT/1024*.3)+0.5)"`
 	INNODB=`perl -E "say int(($MEMTOT*1024*.25)+0.5)"`
 fi
-if [ $MEMGB -ge 8 ] || [ $MEMGB -le 16 ]; then
+if [ $MEMGB -ge 8 ] && [ $MEMGB -le 16 ]; then
 	JAVAHEAP=`perl -E "say int(($MEMTOT/1024*.25)+0.5)"`
 	INNODB=`perl -E "say int(($MEMTOT*1024*.3)+0.5)"`
 fi
